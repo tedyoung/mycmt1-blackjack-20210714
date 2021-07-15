@@ -25,4 +25,11 @@ public class Wallet {
     public int balance() {
         return balance;
     }
+
+    public void bet(int amount) {
+        if (amount > balance) {
+            throw new IllegalStateException();
+        }
+        balance -= amount;
+    }
 }
